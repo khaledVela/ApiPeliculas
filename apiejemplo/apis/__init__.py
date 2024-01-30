@@ -1,0 +1,5 @@
+from .simple_serializers import GeneroSimpleSerializer, ClasificacionSimpleSerializer
+from .genero_viewset import GeneroViewSet, GeneroSerializer
+from .clasificacion_viewset import ClasificacionViewSet, ClasificacionSerializer
+from .pelicula_viewset import PeliculaViewSet, PeliculaSerializer
+from .usuario_viewset import CustomUserViewSet, CustomUserSerializer
