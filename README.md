@@ -20,6 +20,7 @@ Crea un superusuario para acceder al panel de administración y gestionar los da
 ```bash
 python manage.py createsuperuser
 ```
+el usuario debe de ser de tipo 1 para crear editar y eliminar los generos, peliculas y clasificaciones 
 ### 4. Ejecutar la aplicación
 Inicia el servidor para ejecutar la aplicación:
 ```bash
