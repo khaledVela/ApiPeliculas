@@ -1,0 +1,609 @@
+{
+	"info": {
+		"_postman_id": "4f500e04-5dc9-42bc-a372-16546d353ade",
+		"name": "Peliculas API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21330509"
+	},
+	"item": [
+		{
+			"name": "Peliculas",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{API_URL}}api/peliculas/"
+					},
+					"response": []
+				},
+				{
+					"name": "buscarPelicula",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "q",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{API_URL}}api/peliculas/buscarPelicula/"
+					},
+					"response": []
+				},
+				{
+					"name": "buscarGenero",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "q",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{API_URL}}api/peliculas/buscarPelicula/"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{API_URL}}api/anuncios/3/"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "17 otra vez",
+									"type": "text"
+								},
+								{
+									"key": "portada",
+									"type": "file",
+									"src": "/C:/Users/PC/Downloads/17otravez0904.jpg"
+								},
+								{
+									"key": "clasificacion_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "genero_id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "fecha_estreno",
+									"value": "2009-04-17",
+									"type": "text"
+								},
+								{
+									"key": "sinonpsis",
+									"value": "Mike (Matthew Perry) es un hombre de 35 años insatisfecho con su vida, y arrepentido de no haber hecho algunas cosas en su pasado que podían haber cambiado su situación. Ahora va a vivir un acontecimiento fantástico. Un día, como por arte de magia, vuelve a tener 17 años; con esa edad, regresará a la escuela dispuesto a cambiar su insatisfecho futuro.",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{API_URL}}api/peliculas/1/"
+					},
+					"response": []
+				},
+				{
+					"name": "Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "El misterio de la estrella",
+									"type": "text"
+								},
+								{
+									"key": "portada",
+									"type": "file",
+									"src": "/C:/Users/PC/Downloads/81Y-R4HZNkL._AC_UF894,1000_QL80_.jpg"
+								},
+								{
+									"key": "clasificacion_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "genero_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "fecha_estreno",
+									"value": "2007-09-07",
+									"type": "text"
+								},
+								{
+									"key": "sinonpsis",
+									"value": "En un pueblo campesino, frontera con una tiera mágica, vive un joven hombre que promete a su amada que recogerá a una estrella que cayó en la tierra mágica, aventurándose más allá de la frontera.",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{API_URL}}api/peliculas/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Genero",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "q",
+								"value": "b",
+								"type": "text"
+							}
+						],
+						"url": "{{API_URL}}api/generos"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{API_URL}}api/generos/1/"
+					},
+					"response": []
+				},
+				{
+					"name": "Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Terror",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{API_URL}}api/generos/"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Brasil",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{API_URL}}api/generos/2/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clasificacion",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "q",
+								"value": "b",
+								"type": "text"
+							}
+						],
+						"url": "{{API_URL}}api/clasificaciones"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{API_URL}}api/clasificaciones/4/"
+					},
+					"response": []
+				},
+				{
+					"name": "Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "C-D",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{API_URL}}api/clasificaciones/"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "B-15",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{API_URL}}api/clasificaciones/4/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{API_URL}}api/usuarios/"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "baisa",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{API_URL}}api/usuarios/1/"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{API_URL}}api/usuarios/2/"
+					},
+					"response": []
+				},
+				{
+					"name": "Post",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "Howard321",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "julianhowardmontalvo@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "Julian",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Howard Montalvo",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Julian_admin",
+									"type": "text"
+								},
+								{
+									"key": "carnet",
+									"value": "105082",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/usuarios/"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "Baisa",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "elbaisa@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "date_of_birth",
+									"value": "2002-02-20",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "nombres",
+									"value": "Khaled Ibrahim",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "apellidos",
+									"value": "Vela Abujder",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "tipo",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "ciudad_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "pais_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "foto",
+									"type": "file",
+									"src": "/C:/Users/PC/Pictures/Khaled Ibrahim Vela Abujder_files/75484606_2331622496961078_5658344315334175145_n.jpg",
+									"disabled": true
+								},
+								{
+									"key": "is_active",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "admininstituto",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": "{{API_URL}}api/usuarios/6/"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Khaled\",\r\n    \"password\":\"baisa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{API_URL}}api/token/"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_URL",
+			"value": "http://127.0.0.1:8000/",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA2Njg3MDQwLCJpYXQiOjE3MDY2ODU4NDAsImp0aSI6IjQ0Yjc0MzJlOWY4MDQ2ZjQ5ZGM2OGVjYWY4ODJlMDZlIiwidXNlcl9pZCI6MX0.uEQbnu2PGxQ2LJQ0qCD8zbLexoAU0BiOY69daAOai_E",
+			"type": "string"
+		}
+	]
+}
